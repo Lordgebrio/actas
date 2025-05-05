@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/ico-levadesk.ico" type="image/x-icon" />
+    <title>Actas de Tecnología | Levapan</title>
+    <link rel="stylesheet" href="css/personal.css" />
+  </head>
+  <body>
+    <main class="main">
+      <!-- Encabezado -->
+      <header class="header">
+        <h1>Acta de Tecnología Levapan</h1>
+        <p>Esta es una herramienta para la gestión de actas de entrega, devolución y prestamo de tecnología.</p>
+      </header>
+      <!-- Formulario -->
+      <section class="section-form">
+        <form action="" method="POST" class="form" id="miFormulario">
+          <!-- Datos del Personal -->
+          <fieldset class="form-group-container">
+            <legend>Datos del Personal</legend>
+            <div class="row">
+              <!-- Nombre del colaborador -->
+              <div class="input-container column">
+                <input type="text" id="nameCollaborator" name="nameCollaborator" class="input-container-input" required />
+                <label for="nameCollaborator" class="input-container-label">Nombre Colaborador</label>
+              </div>
+              <!-- Número de documento -->
+              <div class="input-container column">
+                <input type="number" id="documento" name="documento" class="input-container-input" required />
+                <label for="documento" class="input-container-label">Número de Documento</label>
+              </div>
+            </div>
+            <!-- Agente TI -->
+            <div class="row-column">
+              <label for="nombreTI">¿Quién Firma?</label>
+              <select class="options-container" id="nombreTI" name="nombreTI" required>
+                <option value="">Seleccione un Agente TI</option>
+                <option value="Michel Alexis Salazar">Michel Salazar</option>
+                <option value="Harold Hurtado">Harold Hurtado</option>
+                <option value="Wilson Perez">Wilson Perez</option>
+                <option value="Jose Luis Urbano">Jose Luis Urbano</option>
+              </select>
+            </div>
+          </fieldset>
+
+          <!-- Características del Equipo -->
+          <fieldset class="form-group-container">
+            <legend>Características del Equipo</legend>
+
+            <div class="row">
+              <!-- Serial del Equipo -->
+              <div class="input-container column">
+                <input type="text" id="serialEquipo" name="serialEquipo" class="input-container-input" required />
+                <label for="serialEquipo" class="input-container-label">Serial del Equipo</label>
+              </div>
+
+              <!-- Placa del Equipo -->
+              <div class="input-container column">
+                <input type="text" id="placaEquipo" name="placaEquipo" class="input-container-input" required />
+                <label for="placaEquipo" class="input-container-label">Placa del Equipo</label>
+              </div>
+
+              <!-- Nombre del Equipo -->
+              <div class="input-container column">
+                <input type="text" id="nombreEquipo" name="nombreEquipo" class="input-container-input" required />
+                <label for="nombreEquipo" class="input-container-label">Nombre del Equipo</label>
+              </div>
+            </div>
+
+            <div class="row-caracteristicas">
+              <!-- Estado Activo -->
+              <div class="input-container column">
+                <label for="estadoActivo">Estado Activo</label>
+                <select class="options-container" name="estadoActivo" id="estadoActivo" required>
+                  <option value="Asignacion">Asignación</option>
+                  <option value="Devolucion">Devolución</option>
+                  <option value="Prestamo">Prestamo</option>
+                </select>
+              </div>
+
+              <!-- Tipo de Equipo -->
+              <div class="input-container column">
+                <label for="tipoEquipo">Tipo de Equipo</label>
+                <select class="options-container" id="tipoEquipo" name="tipoEquipo" required>
+                  <option value="">Seleccione una opción</option>
+                  <option value="Portátil">Portátil</option>
+                  <option value="Escritorio">Escritorio</option>
+                  <option value="Impresora">Impresora</option>
+                  <option value="Escáner">Escáner</option>
+                  <option value="Teléfono">Teléfono</option>
+                  <option value="Monitor">Monitor</option>
+                  <option value="Otros">Otros</option>
+                </select>
+              </div>
+
+              <!-- Marca del Equipo -->
+              <div class="input-container column">
+                <label for="marcaEquipo">Marca del Equipo</label>
+                <select class="options-container" id="marcaEquipo" name="marcaEquipo" required>
+                  <option value="">Seleccione una opcion</option>
+                  <option value="HP">HP</option>
+                  <option value="Dell">Dell</option>
+                  <option value="Honeywell">Honeywell</option>
+                  <option value="Jabra">Jabra</option>
+                  <option value="Lenovo">Lenovo</option>
+                  <option value="MacOS">MacOS</option>
+                  <option value="Samsung">Samsung</option>
+                  <option value="Zebra">Zebra</option>
+                </select>
+              </div>
+
+              <!-- Modelo del Equipo -->
+              <div class="input-container column">
+                <label for="modeloEquipo">Modelo del Equipo</label>
+                <select class="options-container" id="modeloEquipo" name="modeloEquipo" required>
+                  <option value="">Seleccione una opción</option>
+                </select>
+              </div>
+
+              <!-- Sistema Operativo -->
+              <div class="input-container column">
+                <label for="sistemaOperativo">Sistema Operativo</label>
+                <select class="options-container" id="sistemaOperativo" name="sistemaOperativo" required>
+                  <option value="">Seleccione una opción</option>
+                </select>
+              </div>
+
+              <div class="input-container column">
+                <label for="procesadorEquipo" class="form-label">Procesador</label>
+                <select class="options-container" id="procesadorEquipo" name="procesadorEquipo" class="form-select" required>
+                  <option value="">Seleccione una opción</option>
+                </select>
+              </div>
+              <div class="input-container column">
+                <label for="memoriaRAMEquipo" class="form-label">Memoria RAM</label>
+                <select class="options-container" id="memoriaRAMEquipo" name="memoriaRAMEquipo" class="form-select" required>
+                  <option value="">Seleccione una opción</option>
+                </select>
+              </div>
+
+              <div class="input-container column">
+                <label for="capacidadDiscoEquipo" class="form-label">Capacidad de Disco</label>
+                <select class="options-container" id="capacidadDiscoEquipo" name="capacidadDiscoEquipo" class="form-select" required>
+                  <option value="">Seleccione una opción</option>
+                </select>
+              </div>
+
+              <div class="input-container column">
+                <label for="versionOfficeEquipo" class="form-label">Versión de Office</label>
+                <select class="options-container" id="versionOfficeEquipo" name="versionOfficeEquipo" class="form-select" required>
+                  <option value="">Seleccione una opción</option>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Accesorios -->
+          <fieldset class="form-group-container container-accesorios">
+            <legend>Accesorios</legend>
+            <div class="accesorios">
+              <!-- Cargador -->
+              <div class="group-container-accesorios">
+                <label for="cargador">Cargador</label>
+                <input class="cargador" type="checkbox" name="cargador" id="cargador" value="cargador" />
+                <div class="input-container">
+                  <input type="text" id="marcaCargador" name="marcaCargador" class="input-container-input" required />
+                  <label for="marcaCargador" class="input-container-label">Marca cargador</label>
+                </div>
+              </div>
+              <!-- Base -->
+              <div class="group-container-accesorios base">
+                <label for="base">Base</label>
+                <input class="base" type="checkbox" name="base" id="base" value="base" />
+                <div class="input-container base-container">
+                  <input type="text" id="marcaBase" name="marcaBase" class="input-container-input" required />
+                  <label for="marcaBase" class="input-container-label">Marca Base</label>
+                </div>
+              </div>
+              <!-- Morral -->
+              <div class="group-container-accesorios morral">
+                <label for="morral">Morral</label>
+                <input class="morral" type="checkbox" name="morral" id="morral" value="morral" />
+                <div class="input-container morral-container">
+                  <input type="text" id="marcaMorral" name="marcaMorral" class="input-container-input" required />
+                  <label for="marcaMorral" class="input-container-label">Marca Morral</label>
+                </div>
+              </div>
+              <!-- Teclado -->
+              <div class="group-container-accesorios teclado">
+                <label for="teclado">Teclado</label>
+                <input class="teclado" type="checkbox" name="teclado" id="teclado" value="teclado" />
+                <div class="input-container teclado-container">
+                  <input type="text" id="marcaTeclado" name="marcaTeclado" class="input-container-input" required />
+                  <label for="marcaTeclado" class="input-container-label">Marca Teclado</label>
+                </div>
+              </div>
+              <!-- Mouse -->
+              <div class="group-container-accesorios mouse">
+                <label for="mouse">Mouse</label>
+                <input class="mouse" type="checkbox" name="mouse" id="mouse" value="mouse" />
+                <div class="input-container mouse-container">
+                  <input type="text" id="marcaMouse" name="marcaMouse" class="input-container-input" required />
+                  <label for="marcaMouse" class="input-container-label">Marca Mouse</label>
+                </div>
+              </div>
+              <!-- Forro -->
+              <div class="group-container-accesorios">
+                <label for="forro">Forro</label>
+                <input class="forro" type="checkbox" name="forro" id="forro" value="forro" />
+                <div class="input-container">
+                  <input type="text" id="marcaForro" name="marcaForro" class="input-container-input" required />
+                  <label for="marcaForro" class="input-container-label">Marca Forro</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="pantalla-container">
+              <!-- Pantalla -->
+              <div class="pantalla">
+                <label for="pantalla">Pantalla</label>
+                <input class="pantalla-check" type="checkbox" name="pantalla" id="pantalla" value="pantalla" />
+                <div class="visible-pantalla">
+                  <div class="input-container">
+                    <input type="text" id="placapantalla" name="placapantalla" class="input-container-input" required />
+                    <label for="placapantalla" class="input-container-label">Placa Pantalla</label>
+                  </div>
+                  <div class="input-container">
+                    <input type="text" id="marcapantalla" name="marcapantalla" class="input-container-input" required />
+                    <label for="marcapantalla" class="input-container-label">Marca Pantalla</label>
+                  </div>
+                  <div class="input-container">
+                    <input type="text" id="modelopantalla" name="modelopantalla" class="input-container-input" required />
+                    <label for="modelopantalla" class="input-container-label">Modelo Pantalla</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Software -->
+          <fieldset class="form-group-container software">
+            <legend>Software</legend>
+            <!-- Microsoft Office -->
+            <div class="align office">
+              <input type="checkbox" name="office" id="office" value="office" checked />
+              <label for="office">Microsoft Office</label>
+            </div>
+            <!-- Antivirus -->
+            <div class="align antivirus">
+              <input type="checkbox" name="antivirus" id="antivirus" value="antivirus" checked />
+              <label for="antivirus">Antivirus</label>
+            </div>
+            <!-- Impresora -->
+            <div class="align impresora">
+              <input type="checkbox" name="impresora" id="impresora" value="impresora" checked />
+              <label for="impresora">Impresora</label>
+            </div>
+            <!-- VPN -->
+            <div class="align vpn">
+              <input type="checkbox" name="vpn" id="vpn" value="vpn" checked />
+              <label for="vpn">VPN</label>
+            </div>
+            <!-- WinRAR -->
+            <div class="align winrar">
+              <input type="checkbox" name="winrar" id="winrar" value="winrar" checked />
+              <label for="winrar">WinRAR</label>
+            </div>
+            <!-- Adobe Reader -->
+            <div class="align adobe">
+              <input type="checkbox" name="adobe" id="adobe" value="adobe" checked />
+              <label for="adobe">Adobe Reader</label>
+            </div>
+            <!-- SAP Gui -->
+            <div class="align sap">
+              <input type="checkbox" name="sap" id="sap" value="sap" checked />
+              <label for="sap">SAP Gui</label>
+            </div>
+            <!-- Team Viewer -->
+            <div class="align teamviewer">
+              <input type="checkbox" name="teamviewer" id="teamviewer" value="teamviewer" checked />
+              <label for="teamviewer">Team Viewer</label>
+            </div>
+            <!-- Adobe Cloud -->
+            <div class="align cloud">
+              <input type="checkbox" name="cloud" id="cloud" value="cloud" />
+              <label for="cloud">Adobe Cloud</label>
+            </div>
+            <!-- 7zip -->
+            <div class="align 7zip">
+              <input type="checkbox" name="7zip" id="7zip" value="7zip" checked />
+              <label for="7zip">7zip</label>
+            </div>
+          </fieldset>
+
+          <!-- Fotos Adjuntas -->
+          <fieldset class="form-group-container fotos-adjuntas">
+            <legend>Fotos Adjuntas</legend>
+            <div class="fotos foto-1" id="foto-1">
+              <p class="text" id="text">Foto Principal</p>
+              <input type="file" name="fotoprincipal" class="btn-enviar" id="btn-enviar" />
+            </div>
+
+            <div class="fotos foto-1" id="foto-2">
+              <p class="text" id="text">Foto Tapa</p>
+              <input type="file" name="fotoprincipal" class="btn-enviar" id="btn-enviar" />
+            </div>
+
+            <div class="fotos" id="foto-3">
+              <p class="text" id="text">Foto inferior</p>
+              <input type="file" name="fotoprincipal" class="btn-enviar" id="btn-enviar" />
+            </div>
+
+            <div class="fotos" id="foto-4">
+              <p class="text" id="text">Accesorios</p>
+              <input type="file" name="fotoprincipal" class="btn-enviar" id="btn-enviar" />
+            </div>
+          </fieldset>
+
+          <!-- Observaciones -->
+          <fieldset class="form-group-container observaciones-container">
+            <legend>Observaciones</legend>
+            <textarea id="observaciones" name="observaciones" rows="4" cols="50" placeholder="Observaciones" required></textarea>
+          </fieldset>
+
+          <fieldset class="form-group-container localizacion">
+            <legend>Localización</legend>
+            <!-- Ciudad -->
+            <div class="ciudad">
+              <label for="ciudad">Ciudad:</label>
+              <select name="ciudad" id="ciudad">
+                <option value="bogota">Bogotá</option>
+                <option value="barranquilla">Barranquilla</option>
+                <option value="bucaramanga">Bucaramanga</option>
+                <option value="cali">Cali</option>
+                <option value="cartagena">Cartagena</option>
+                <option value="funza">Funza</option>
+                <option value="medellin">Medellín</option>
+                <option value="neiva">Neiva</option>
+                <option value="pereira">Pereira</option>
+                <option value="santa-marta">Santa Marta</option>
+                <option value="tulua">Tuluá</option>
+                <option value="tunja">Tunja</option>
+              </select>
+            </div>
+
+            <!-- Fecha -->
+            <div class="fecha">
+              <label for="fecha">Fecha:</label>
+              <input type="date" id="fecha" name="fecha" required />
+            </div>
+          </fieldset>
+
+          <!-- Firmas -->
+          <fieldset class="form-group-container firmas">
+            <legend>Firmas</legend>
+
+            <!-- Firma del Colaborador -->
+            <div class="firma-colaborador">
+              <label for="firmaColaborador">Firma del Colaborador:</label>
+              <canvas id="firmaColaboradorCanvas" class="firma-canvas" width="300" height="150"></canvas>
+              <button class="btn-limpiar" type="button" id="limpiarFirmaColaborador">Limpiar Firma</button>
+              <input type="hidden" id="firmaColaborador" name="firmaColaborador" />
+            </div>
+
+            <!-- Firma del Técnico -->
+            <div class="firma-tecnico">
+              <label for="firmaTecnico">Firma del Técnico:</label>
+              <canvas id="firmaTecnicoCanvas" class="firma-canvas" width="300" height="150"></canvas>
+              <button class="btn-limpiar" type="button" id="limpiarFirmaTecnico">Limpiar Firma</button>
+              <input type="hidden" id="firmaTecnico" name="firmaTecnico" />
+            </div>
+          </fieldset>
+
+          <!-- Botón de envío -->
+          <button class="enviar" type="submit">Enviar Acta</button>
+        </form>
+      </section>
+    </main>
+    <!-- Script -->
+    <script src="js/options.js"></script>
+    <script src="js/firma.js"></script>
+    <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+    <script>
+      document.getElementById("miFormulario").addEventListener("submit", async function (event) {
+        event.preventDefault();
+
+        // Recolectar todos los inputs, selects, textareas
+        const elements = document.querySelectorAll("input, select, textarea");
+        const datos = {};
+        elements.forEach((el) => {
+          if (el.type === "checkbox") {
+            datos[el.id] = el.checked ? "On" : "Off";
+          } else {
+            datos[el.id] = el.value;
+          }
+        });
+
+        // Cargar el PDF base
+        const existingPdfBytes = await fetch("plantilla.pdf").then((res) => res.arrayBuffer());
+        const pdfDoc = await PDFLib.PDFDocument.load(existingPdfBytes);
+        const form = pdfDoc.getForm();
+
+        // Llenar campos que coincidan
+        Object.keys(datos).forEach((id) => {
+          try {
+            const field = form.getFieldMaybe(id);
+            if (field) {
+              if (field.constructor.name === "PDFCheckBox") {
+                if (datos[id] === "On") {
+                  field.check();
+                } else {
+                  field.uncheck();
+                }
+              } else {
+                field.setText(datos[id]);
+              }
+            }
+          } catch (e) {
+            console.warn(`No se encontró campo para: ${id}`);
+          }
+        });
+
+        form.flatten(); // Opcional: hace el formulario no editable
+
+        function obtenerImagenDesdeCanvas(idCanvas) {
+          const canvas = document.getElementById(idCanvas);
+          return canvas.toDataURL("image/png");
+        }
+
+        const firmasCanvas = ["firmaColaboradorCanvas", "firmaTecnicoCanvas"]; // puedes agregar más
+        for (const id of firmasCanvas) {
+          const dataUrl = obtenerImagenDesdeCanvas(id);
+          const imageBytes = await fetch(dataUrl).then((res) => res.arrayBuffer());
+
+          const field = form.getFieldMaybe(id);
+          if (!field) {
+            console.warn(`No se encontró campo de firma para: ${id}`);
+            continue;
+          }
+
+          const fieldRect = field.acroField.dict.get("Rect");
+          const pageRef = field.acroField.dict.get("P");
+          const page = pages.find((p) => p.ref === pageRef) || pages[0];
+
+          const [x1, y1, x2, y2] = fieldRect;
+          const x = x1;
+          const y = y1;
+          const width = x2 - x1;
+          const height = y2 - y1;
+
+          const image = await pdfDoc.embedPng(imageBytes);
+          page.drawImage(image, { x, y, width, height });
+
+          field.acroField.set("Ff", 1 << 0); // ocultar el botón original si deseas
+        }
+
+        const archivos = {};
+        formInputs.forEach((el) => {
+          if (el.type === "file" && el.files.length > 0) {
+            archivos[el.id] = el.files[0]; // id debe ser igual al del campo PDF
+          }
+        });
+
+        for (const id in archivos) {
+          const file = archivos[id];
+          const imageBytes = await file.arrayBuffer();
+
+          const field = form.getFieldMaybe(id);
+          if (!field) {
+            console.warn(`No se encontró campo de imagen para: ${id}`);
+            continue;
+          }
+
+          const fieldRect = field.acroField.dict.get("Rect");
+          const pageRef = field.acroField.dict.get("P");
+          const page = pages.find((p) => p.ref === pageRef) || pages[0];
+
+          const [x1, y1, x2, y2] = fieldRect;
+          const width = x2 - x1;
+          const height = y2 - y1;
+
+          let image;
+          if (file.type.includes("png")) {
+            image = await pdfDoc.embedPng(imageBytes);
+          } else {
+            image = await pdfDoc.embedJpg(imageBytes);
+          }
+
+          page.drawImage(image, {
+            x: x1,
+            y: y1,
+            width,
+            height,
+          });
+
+          field.acroField.set("Ff", 1 << 0); // oculta el campo original si quieres
+        }
+
+        const pdfBytes = await pdfDoc.save();
+        const blob = new Blob([pdfBytes], { type: "application/pdf" });
+        const url = URL.createObjectURL(blob);
+
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "acta-llenada.pdf";
+        a.click();
+      });
+    </script>
+  </body>
+</html>
